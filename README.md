@@ -5,6 +5,12 @@ El algoritmo resuelve el problema de la gestión y revisión de inventario en un
 
 Algoritmo ControlStock
 
+VARIABLES
+    N, i, stock_total, stock_actual: ENTERO
+    ARREGLO[100] DE ENTERO: stock
+
+Inicio
+
     stock_total<-0
 
     i<-1
@@ -36,12 +42,15 @@ Pseudocódigo en español neutro, sin lenguaje de programación específico.
 ### Tabla de Trazado (Prueba de Escritorio)
 Esta tabla simula el comportamiento del algoritmo con un inventario de 3 productos (N = 3). Incluye un caso con stock normal (5), un caso de error con número negativo (-2) que obliga a corregir el dato ingresando un producto agotado (0), y un último producto normal (10).
 
-|i|N|¿i<=N?|stock[i]|¿stock[i]<0?|¿stock[i]==0?|stock_total|PANTALLA / SALIDA|
+|i|N|¿i<=N? |stock_actual |¿stock_actual<0? |¿stock_actual==0? |stock_total |PANTALLA / SALIDA |
 |---|---|---|---|---|---|---|---|
-|1|3|Verdadero|5|Falso|Falso|5||
-|1|3|Verdadero|-2|Verdadero|-|5|"Error: Stock inválido"|
-|1|3|Verdadero|0|Falso|Verdadero|5|"Producto agotado en la posición: 2"|
-|2|3|Verdadero|10|Falso|Falso|15||
-|3|3|Falso|-|-|-|15|"Stock total final mostrado en pantalla"|
+|1|5|Verdadero|8|Falso|Falso|8||
+|2|5|Verdadero|0|Falso|Verdadero|8|"Producto agotado en la posición: 2"|
+|3|5|Verdadero|-3|Verdadero|-|8|"Error: El stock no puede ser negativo."|
+|3|5|Verdadero|12|Falso|Falso|20||
+|4|5|Verdadero|5|Falso|Falso|25||
+|5|5|Verdadero|0|Falso|Verdadero|25|"Producto agotado en la posición: 5"|
+|6|5|Falso|-|-|-|-|"El inventario total calculado es: 25"|
+
 ## Autor
 Neyan Castellanos - Q1 20261
